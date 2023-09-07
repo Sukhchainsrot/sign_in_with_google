@@ -35,5 +35,10 @@ return [
         'client_secret' => env('GOOGLE_CLIENT_SECRET'),
         'redirect' => 'http://first-project.tech:82/auth/google/call-back',
     ],
+    'facebook' => [
+        'client_id' => env('Facebook_CLIENT_ID'),
+        'client_secret' => env('Facebook_CLIENT_SECRET'),
+        'redirect' => 'http://first-project.tech:82/auth/facebook/callback',
+    ],
 
 ];

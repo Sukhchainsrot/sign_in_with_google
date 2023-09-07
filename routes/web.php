@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\GoogleAuthController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\SocialController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,6 +23,9 @@ Route::get('auth/google',[GoogleAuthController::class,'loginWithGoogle'])->name(
 
 Route::get('auth/google/call-back',[GoogleAuthController::class,'callbackfromgoogle'])->name('google-callBack');
 
-Route::get('google/index',[GoogleAuthController::class,'index'])->name('google.home');
+Route::get('auth/facebook', [SocialController::class, 'facebookRedirect']);
+Route::get('auth/facebook/callback', [SocialController::class, 'loginWithFacebook']);
+
 
 Auth::routes();
+
