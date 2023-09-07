@@ -18,9 +18,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('auth/google',[GoogleAuthController::class,'signInwithGoogle'])->name('google-auth');
+Route::get('auth/google',[GoogleAuthController::class,'loginWithGoogle'])->name('google-auth');
 
-Route::get('auth/google/call-back',[GoogleAuthController::class,'callbackToGoogle'])->name('google-callBack');
+Route::get('auth/google/call-back',[GoogleAuthController::class,'callbackfromgoogle'])->name('google-callBack');
 
 Route::get('google/index',[GoogleAuthController::class,'index'])->name('google.home');
 
