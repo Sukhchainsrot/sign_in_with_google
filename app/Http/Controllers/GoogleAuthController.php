@@ -22,7 +22,7 @@ class GoogleAuthController extends Controller
       
                 Auth::login($finduser);
      
-                return redirect('/dashboard');
+                return redirect('/home');
       
             }else{
                 $newUser = User::create([
@@ -35,11 +35,15 @@ class GoogleAuthController extends Controller
      
                 Auth::login($newUser);
       
-                return redirect('/dashboard');
+                return redirect('/home');
             }
      
         } catch (Exception $e) {
             dd($e->getMessage());
         }
+    }
+    public function index()
+    {
+        return redirect()->route('google.home');
     }
 }

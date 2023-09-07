@@ -22,6 +22,6 @@ Route::get('auth/google',[GoogleAuthController::class,'signInwithGoogle'])->name
 
 Route::get('auth/google/call-back',[GoogleAuthController::class,'callbackToGoogle'])->name('google-callBack');
 
-Route::get('home',[GoogleAuthController::class,'index'])->name('index');
+Route::get('google/index',[GoogleAuthController::class,'index'])->name('google.home');
 
 Auth::routes();

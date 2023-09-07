@@ -10,6 +10,8 @@
   <!-- Bootstrap CSS v5.2.1 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
 
@@ -38,7 +40,7 @@
       <div class="row justify-content-center">
           <div class="col-md-8">
               <div class="card">
-                  <div class="card-header">{{ __('Login') }}</div>
+                  <div class="card-header bg-dark text-white">{{ __('Login') }}</div>
   
                   <div class="card-body">
                       <form method="POST" action="{{ route('login') }}">
@@ -96,9 +98,13 @@
                                           {{ __('Forgot Your Password?') }}
                                       </a>
                                   @endif
-                              </div>
-                          </div>
-                          <a name="" id="" class="btn btn-outline-dark" href="{{route('google-auth')}}" role="button"> Sign in with google</a>
+                                </div>
+
+                            </div>
+                            <div style="text-align: center">
+                            <span>----------------------------OR----------------------------</span><br>
+                            <a name="" id="" class="btn btn-outline-dark" href="{{route('google-auth')}}" role="button">  Sign in with google  <i class="fa fa-google" style="font-size:40px;"></i></a>
+                        </div>
                       </form>
                   </div>
               </div>
@@ -106,7 +112,7 @@
       </div>
   </div>
   @endsection
-  
+
 </body>
 
 </html>
