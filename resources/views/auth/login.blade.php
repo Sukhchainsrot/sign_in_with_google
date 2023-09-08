@@ -100,9 +100,12 @@
                           </div>
                           <div style="text-align: center">
                             <span>----------------------------OR----------------------------</span><br>
-                            <a name="" id="" class="btn btn-outline-dark" href="{{route('google-auth')}}" role="button">  Sign in with google  <i class="fa fa-google" style="font-size:40px;"></i></a> <br> <br>
+                            <a name="" id="" class="btn btn-outline-dark" href="{{route('google-auth')}}" role="button"> Login with google  <i class="fa fa-google" style="font-size:40px;"></i></a> <br> <br>
 
-                            <a name="" id="" class="btn btn-outline-primary" href="{{ url('auth/facebook') }}"role="button">  Sign in with facebook  <i class="fa fa-facebook" style="font-size:30px;"></i></a>
+                            <a name="" id="" class="btn btn-outline-primary" href="{{ url('auth/facebook') }}"role="button">  Login with facebook  <i class="fa fa-facebook" style="font-size:30px;"></i></a><br> <br>
+
+                            <a name="" id="" class="btn btn-outline-secondary"  href="{{ url('auth/linkedin') }}"role="button">  Login with Linkd<i class="fa fa-linkedin" style="font-size:40px;"></i></a> <br> <br>
+
 
                         </div>
                       </form>

@@ -3,6 +3,7 @@
 use App\Http\Controllers\GoogleAuthController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SocialController;
+use App\Http\Controllers\LinkedinController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,12 +21,17 @@ Route::get('/', function () {
 });
 
 Route::get('auth/google',[GoogleAuthController::class,'loginWithGoogle'])->name('google-auth');
-
 Route::get('auth/google/call-back',[GoogleAuthController::class,'callbackfromgoogle'])->name('google-callBack');
+
 
 Route::get('auth/facebook', [SocialController::class, 'facebookRedirect']);
 Route::get('auth/facebook/callback', [SocialController::class, 'loginWithFacebook']);
 
 
+
+Route::get('auth/linkedin', [LinkedinController::class, 'linkedinRedirect']);
+Route::get('auth/linkedin/callback', [LinkedinController::class, 'linkedinCallback']);
+
 Auth::routes();
 
+    
