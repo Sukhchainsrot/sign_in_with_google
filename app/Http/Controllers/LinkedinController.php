@@ -18,7 +18,8 @@ class LinkedinController extends Controller
     public function linkedinCallback()
     {
         try {
-     
+         $user = Socialite::driver('linkedin')->user();
+
             $user = Socialite::driver('linkedin')->user();
       
             $linkedinUser = User::where('oauth_id', $user->id)->first();
@@ -27,7 +28,7 @@ class LinkedinController extends Controller
       
                 Auth::login($linkedinUser);
      
-                return redirect('/dashboard');
+                return view('/home');
       
             }else{
                 $user = User::create([
@@ -40,13 +41,11 @@ class LinkedinController extends Controller
      
                 Auth::login($user);
       
-                return redirect('/dashboard');
+                return view('/home');
             }
-     
         } 
         catch (Exception $e) {
             dd($e->getMessage());
-            dd(error($e));
         }
     }
 }

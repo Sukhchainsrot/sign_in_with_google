@@ -34,4 +34,3 @@ Route::get('auth/linkedin/callback', [LinkedinController::class, 'linkedinCallba
 
 Auth::routes();
 
-    

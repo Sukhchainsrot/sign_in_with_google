@@ -38,7 +38,7 @@ return [
     'facebook' => [
         'client_id' => env('Facebook_CLIENT_ID'),
         'client_secret' => env('Facebook_CLIENT_SECRET'),
-        'redirect' => 'http://first-project.tech:82/auth/facebook/  ',
+        'redirect' => 'http://first-project.tech:82/auth/facebook/callback  ',
     ],
     'linkedin' => [
         'client_id' => env('Linkedin_CLIENT_ID'),
